@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+    <attributecategories>
+        <category handle="events" allow-sets="1" package="hw_attribute_example"/>
+    </attributecategories>
+    <singlepages>
+        <page name="HW Event" path="/dashboard/event" filename="/dashboard/event.php" pagetype="" description="" package="hw_attribute_example"></page>
+        <page name="Events" path="/dashboard/event/events" filename="/dashboard/event/events.php" pagetype="" description="" package="hw_attribute_example"></page>
+        <page name="Attributes" path="/dashboard/event/events/attributes" filename="/dashboard/event/events/attributes.php" pagetype="" description="" package="hw_attribute_example"></page>
+    </singlepages>
+</concrete5-cif>
