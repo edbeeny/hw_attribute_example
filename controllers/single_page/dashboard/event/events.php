@@ -37,7 +37,9 @@ class Events extends \Concrete\Core\Page\Controller\DashboardPageController
         $events = new HWEvents();
 
         $this->set('events', $events);
-
+        
+        $attrList = EventKey::getList();
+        $this->set('attribs',$attrList);
 
 
     }
