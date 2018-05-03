@@ -3,9 +3,39 @@
     <attributecategories>
         <category handle="events" allow-sets="1" package="hw_attribute_example"/>
     </attributecategories>
+    <attributetypes>
+    <attributetype handle="text" name="Text" package="hw_attribute_example">
+        <categories>
+            <category handle="events"/>
+        </categories>
+    </attributetype>
+        <attributetype handle="textarea" name="Text Area" package="hw_attribute_example">
+            <categories>
+                <category handle="events"/>
+            </categories>
+        </attributetype>
+        <attributetype handle="boolean" name="Checkbox" package="hw_attribute_example">
+            <categories>
+                <category handle="events"/>
+            </categories>
+        </attributetype>
+    </attributetypes>
+    <attributekeys>
+        <attributekey handle="attribute_text" name="Attribute Text" package="hw_attribute_example" searchable="1" indexed="0" type="text" category="events">
+            <type mode=""/>
+        </attributekey>
+        <attributekey handle="attribute_description" name="Attribute Description" package="hw_attribute_example" searchable="1" indexed="0" type="textarea" category="events">
+            <type mode=""/>
+        </attributekey>
+        <attributekey handle="attribute_checkbox" name="Attribute Checkbox" package="hw_attribute_example" searchable="1" indexed="0" type="boolean" category="events">
+            <type mode=""/>
+        </attributekey>
+    </attributekeys>
     <singlepages>
         <page name="HW Event" path="/dashboard/event" filename="/dashboard/event.php" pagetype="" description="" package="hw_attribute_example"></page>
         <page name="Events" path="/dashboard/event/events" filename="/dashboard/event/events.php" pagetype="" description="" package="hw_attribute_example"></page>
-        <page name="Attributes" path="/dashboard/event/events/attributes" filename="/dashboard/event/events/attributes.php" pagetype="" description="" package="hw_attribute_example"></page>
+        <page name="Attributes" path="/dashboard/event/events/attributes" filename="/dashboard/event/events/attributes.php" pagetype="" description="" package="hw_attribute_example">
+        </page>
     </singlepages>
 </concrete5-cif>
+
