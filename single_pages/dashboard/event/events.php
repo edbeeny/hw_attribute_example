@@ -61,34 +61,32 @@
                 </style>
             </div>
         </div>
+
+        <?php
+
+        if (count($attribs) > 0) {
+            foreach ($attribs
+
+                     as $ak) {
+                if (is_object($event)) {
+                    $caValue = $event->getAttributeValueObject($ak);
+                }
+                ?>
+
                 <div class="form-group">
-
-                    <?php
-
-                    if (count($attribs) > 0) {
-                    foreach ($attribs
-
-                    as $ak) {
-                    if (is_object($event)) {
-                        $caValue = $event->getAttributeValueObject($ak);
-                    }
-                    ?>
-                    <div class="form-group">
-                        <?= $ak->render('label'); ?>
-                        <div class="input">
-                            <?= $ak->render('composer', $caValue, true) ?>
-                        </div>
+                    <?= $ak->render('label'); ?>
+                    <div class="input">
+                        <?= $ak->render('composer', $caValue, true) ?>
                     </div>
                 </div>
 
 
             <?php } ?>
 
-            <?php } else { ?>
-                <em><?= t('You haven\'t created Event attributes') ?></em>
+        <?php } else { ?>
+            <em><?= t('You haven\'t created Event attributes') ?></em>
 
-            <?php } ?>
-
+        <?php } ?>
 
 
         <div class="ccm-dashboard-form-actions-wrapper">
